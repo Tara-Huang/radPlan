@@ -1,5 +1,5 @@
-# gptplan
-This project, `gptplan`, is designed for automated radiotherapy treatment planning using advanced AI techniques. It integrates multi-agent systems, retrieval augmented generation, and specialized radiotherapy libraries to streamline and potentially optimize the planning process. You can find our paper [A feasibility study of automating radiotherapy planning with large language model agents](https://iopscience.iop.org/article/10.1088/1361-6560/adbff1) for more information.
+# radplan
+This project, `radplan`, is designed for automated radiotherapy treatment planning using advanced AI techniques.
 
 ## Core Functionality
 The system uses AI agents, built with the `pyautogen` framework, to automate various aspects of treatment planning. Key functionalities include:
@@ -40,31 +40,12 @@ The project is built in Python and relies on several external libraries.
 
 3.  **LLM Configuration:**
     The project uses Large Language Models (LLMs) via `pyautogen`. You need to configure your LLM API keys.
-    *   Examine `llm_config.py`. This file likely sets up the configuration for the LLM provider (e.g., Google Generative AI, given the `google-generativeai` dependency).
+    *   Examine `llm_config.py`. This file likely sets up the configuration for the LLM provider.
     *   You may need to create or update `llm_config.json` or set environment variables with your API keys as required by `llm_config.py` and `pyautogen`. Refer to the `pyautogen` documentation for details on configuring LLM providers.
-
-## How to Run
-
-The primary way to run a full auto-planning workflow is likely through the main execution scripts. Individual modules also contain test routines.
-
-1.  **Main Auto-Planning Workflow:**
-    The script `auto_planning_patient48_rag.py` appears to be an example of an end-to-end automated planning process.
-    ```bash
-    python auto_planning_patient48_rag.py
-    ```
-    Ensure your LLM configuration is correctly set up before running. This script will likely demonstrate the collaboration of agents, RAG, and PortPy for a specific patient case.
-
-2.  **Running Individual Modules / Unit Tests:**
-    Several modules have `if __name__ == "__main__":` blocks, often calling `unit_test()` functions. These can be run directly to test or demonstrate the functionality of that specific module:
-    *   `python agent_team.py`
-    *   `python database_Lung.py`
-    *   `python rag.py`
-    *   `python use_portpy.py`
 
 ## Project Structure Overview
 
-*   `agent_team.py`: Defines and manages the team of AI agents.
-*   `auto_planning_patient48_rag.py`: Example script for running the full auto-planning workflow with RAG.
+*   `test.py`: Defines and manages the team of AI agents.
 *   `database.py` / `database_Lung.py`: Handles database interactions and patient data.
 *   `llm_config.py`: Configures the Large Language Models for `pyautogen`.
 *   `llm_config.json`: (If used) Stores LLM API keys or other related configurations.
