@@ -1,0 +1,17 @@
+[
+    {
+        "model": "deepseek-reasoner",
+        "api_key": "SET_VIA_ENV_DEEPSEEK_API_KEY",
+        "base_url": "https://api.deepseek.com",
+        "timeout": 300,
+        "max_retries": 5,
+        "tags": [
+            "local-gpt-4o",
+            "gm-pro",
+            "llama405B",
+            "oai-gpt-4o",
+            "local-gpt-4",
+            "gm-flash"
+        ]
+    }
+]
